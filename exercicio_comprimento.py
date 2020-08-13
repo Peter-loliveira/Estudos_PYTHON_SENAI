@@ -32,8 +32,7 @@ else:
     print('Em NENHUM dos comodos serão gastos mais de R$ 1.000,00')
 
 if sala_area / tamanho_piso >= 100 or quarto_area / tamanho_piso >= 100:
-    print('Em pe3
-    lo menos UM dos comodos serão gastos MAIS que 100 pisos')
+    print('Em pelo menos UM dos comodos serão gastos MAIS que 100 pisos')
 else: 
     print('Em NENHUM dos comodos serão gastos MAIS que 100 pisos')
 

@@ -19,8 +19,8 @@ Obs.: Desenvolver o código-fonte preferencialmente sem utilizar estruturas cond
 
 # Listas
 destinos = ['Miami', 'Barcelona', 'Florença', 'Amsterdã','Tóquio']
-europa = [destinos[1], destinos[2],destinos[3]] #coloquei na var europa APENAS os paises da var destino que fazem parte dela.
 valores = [5000, 6500, 7500, 8500,10000]
+europa = [destinos[1], destinos[2],destinos[3]] #coloquei na var europa APENAS os paises da var destino que fazem parte dela.
 
 # Captura dados do usuário
 print('Nossos possives destinos:')

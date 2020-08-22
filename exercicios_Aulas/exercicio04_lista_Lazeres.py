@@ -18,6 +18,6 @@ opcao = 0
 while not opcao in [1,2,3,4]:
     opcao = int(input(lazeres))
     if opcao == 4:
-        print('\n#############################\nERRO! ERRO! ERRO! ERRO! ERRO!\n O PROGRAMA SERÁ FINALIZADO\n#############################\n')
+        print('\n#############################\n      MENTITA! MENTITA!\n O PROGRAMA SERÁ FINALIZADO\n#############################\n')
         break
     print('\n###############################\n       OK. OPÇÃO VÁLIDA\n OBRIGADO POR SUA PARTICIÁÇÃO\n     E AGORA SE SAIA.\n###############################\n')

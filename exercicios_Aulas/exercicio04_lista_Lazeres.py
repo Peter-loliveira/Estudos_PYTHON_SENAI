@@ -12,12 +12,21 @@ opção válida
 
 """
 
-lazeres = '\nEscolha seu lazer preferido:\n1 - Jogar. \n2 - Assistir seriado. \n3 - Usar redes sociais. \n4 - Programar.\n'
+# lazeres = '\nEscolha seu lazer preferido:\n1 - Jogar. \n2 - Assistir seriado. \n3 - Usar redes sociais. \n4 - Programar.\n'
+lazeres = '''Escolha seu lazer preferido: 
+1 - Jogar. 
+2 - Assistir seriado. 
+3 - Usar redes sociais. 
+4 - Programar.
+'''
 
+opcoes_disponiveis = [1,2,3,4]
 opcao = 0
-while not opcao in [1,2,3,4]:
+while not opcao in opcoes_disponiveis:
     opcao = int(input(lazeres))
-    if opcao == 4:
+    if opcao in [1,2,3]:
+        pass
+    elif opcao == 4:
         print('\n#############################\n      MENTITA! MENTITA!\n O PROGRAMA SERÁ FINALIZADO\n#############################\n')
         break
-    print('\n###############################\n       OK. OPÇÃO VÁLIDA\n OBRIGADO POR SUA PARTICIÁÇÃO\n     E AGORA SE SAIA.\n###############################\n')
+    print('\n###############################\n       OK. OPÇÃO VÁLIDA\n OBRIGADO POR SUA PARTICIÁÇÃO\n       E AGORA SE SAIA.\n###############################\n')

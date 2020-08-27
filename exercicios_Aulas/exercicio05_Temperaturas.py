@@ -10,7 +10,7 @@ mostre uma mensagem que a temperatura é quente
 """
 
 temps = [33.5, 28.7, 36.1, 30.9, 35.3,27.0]
-print('\n##############################')
+print('\n#############################')
 for tempAtual in range(len(temps)):
-    print('{} - TEMPERATURA MUITO ALTA!'.format(temps[tempAtual]) if temps[tempAtual] >= 35 else '{} - TEMPERATURA AMENA!'.format(temps[tempAtual]))
-print('##############################\n')
+    print('{}. TEMPERATURA MUITO ALTA!'.format(temps[tempAtual]) if temps[tempAtual] >= 35 else '{}. TEMPERATURA AMENA!'.format(temps[tempAtual]))
+print('#############################\n')

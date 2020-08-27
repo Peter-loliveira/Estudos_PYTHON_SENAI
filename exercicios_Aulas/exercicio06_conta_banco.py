@@ -41,7 +41,7 @@ class conta_banco:
     
     def imprimi_dados(self):
         print('\n#######################')
-        print('Dados da Conta\nBanco: {}\nAgencia: {}\nConta: {}\nTitular: {}\nTipo de Conta: {}\nSaldo: {}\nLimite de Saque: {}'.format(self.banco, self.agencia, self.conta, self.titular, self.tipo, self.saldo, self.limite_saque))
+        print('Dados da Conta\nBanco: {}\nAgencia: {}\nConta: {}\nTitular: {}\nTipo de Conta: {}\nSaldo: {:.2f}\nLimite de Saque: {:.2f}'.format(self.banco, self.agencia, self.conta, self.titular, self.tipo, self.saldo, self.limite_saque))
         print('#######################\n')
                 
 def main():
@@ -78,7 +78,7 @@ def main():
 
     # FUNÇÕES DE SAQUE E DEPOSITO
     def realizar_saque():
-        print('##################################################')
+        print('\n##################################################')
         try:
             valor_saque = float(input('Digite o valor a ser SACADO: '))
         except:
@@ -96,7 +96,7 @@ def main():
                 print('##################################################\n')
     
     def realizar_deposito():
-        print('##################################################')
+        print('\n##################################################')
         try:
             valor_deposito = float(input('Digite o valor a ser DEPOSITADO: '))
         except:
@@ -107,7 +107,7 @@ def main():
             print('##################################################\n')
 
     def alterar_limite_saque():
-        print('##################################################')
+        print('\n##################################################')
         novo_limite = float(input('Informe o NOVO limite de saque: '))
         conta1.alterar_limite(novo_limite)
         print('O NOVO LIMITE DE {} É DE R$ {}'.format(conta1.titular, conta1.limite_saque))

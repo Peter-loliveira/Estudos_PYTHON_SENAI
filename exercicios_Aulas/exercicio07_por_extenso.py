@@ -23,6 +23,7 @@ dezenas = {
 }
 
 unidades = {
+    '0': '',
     '1': 'Um',
     '2': 'Dois',
     '3': 'Tres',
@@ -38,6 +39,8 @@ numero = input('Digite um Nr: ')
 while numero != '0':
     if numero in array_dezenas:
         print(array_dezenas.get(numero))
+    elif len(numero) == 2 and numero[1] == '0':
+        print('{}'.format(dezenas[numero[0]]))
     else: 
         print('{} e {}'.format(dezenas[numero[0]], unidades[numero[1]]) if len(numero) == 2 else '{}'.format(unidades[numero[0]]))
     numero = input('Digite um Nr: ')

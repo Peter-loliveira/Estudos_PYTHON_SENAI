@@ -107,7 +107,7 @@ def main():
             print('##################################################\n')
 
     def alterar_limite_saque():
-        print('\n##################################################')
+        print('##################################################')
         novo_limite = float(input('Informe o NOVO limite de saque: '))
         conta1.alterar_limite(novo_limite)
         print('O NOVO LIMITE DE {} É DE R$ {}'.format(conta1.titular, conta1.limite_saque))

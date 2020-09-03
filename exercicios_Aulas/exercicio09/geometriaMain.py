@@ -39,6 +39,4 @@ def main():
     NovoCirculo.alterarPi(pi)
     print('\nAGORA o circulo tem a Circunferencia: {:.2f}'.format(NovoCirculo.obter_circunferencia()))
 
-
-
 main()

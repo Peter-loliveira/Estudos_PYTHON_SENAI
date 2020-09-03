@@ -21,8 +21,8 @@ Criar a função main() fora da classe e:
 '''
 
 class conta_banco:
-    def __init__(self, banco, agencia, conta, titular, tipo, saldo, limite_saque):
-        self.banco = banco
+    def __init__(self, banco_digitado, agencia, conta, titular, tipo, saldo, limite_saque):
+        self.banco = banco_digitado
         self.agencia = agencia
         self.conta = conta
         self.titular = titular

@@ -15,10 +15,10 @@ class circulo:
         self.raio = raioDigitado
     
     def obter_area(self):
-        return self.pi * self.raio
+        return circulo.pi * self.raio**2
     
     def obter_circunferencia(self):
-        return self.pi * self.raio * 2
+        return circulo.pi * self.raio * 2
     
     @classmethod
     def alterarPi(cls, NovoPi):

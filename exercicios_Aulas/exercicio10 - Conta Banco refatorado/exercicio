@@ -1,0 +1,28 @@
+##############################    ok    ##############################
+Refatore a classe ContaBanco criada na atividade anterior:
+- Crie um atributo de classe privado chamado id, com valor inicial 0.
+- O inicializador deve ter apenas dois parâmetros: titular e tipo_conta.
+- Dentro do inicializador, além de passar os valores dos parâmetros aos atributos titular e tipo_conta, crie os atributos privados _saldo (valor inicial 0.0) e _limite_saque (valor inicial 1000.0).
+
+- Crie a property e o setter de tipo_conta. Dentro do setter, permita apenas que os tipos C (de corrente) ou P (de poupança) sejam atribuídos. Caso a pessoa tente colocar um tipo de conta inválido, atribua o tipo P.
+
+
+
+############################    resta    ##############################
+- Crie também um atributo privado chamado _num_conta, que deve receber o id da classe. Atenção: a cada novo objeto criado, o id da classe deve ser incrementado anteriormente, para que cada conta tenha um número diferente. Portanto, a primeira conta criada vai ter _num_conta = 1, a segunda conta criada terá _num_conta = 2 e assim sucessivamente. O atributo de classe id servirá justamente para auxiliar nessa contagem. O incremento do id deve ser feito dentro do próprio inicializador.
+
+- Crie a property de saldo.
+- Mantenha os métodos sacar(), depositar() e exibir_info() da atividade anterior.
+
+Crie a classe Agencia.
+- Ela deve ter apenas ‘numero’ como parâmetro no inicializador. Dentro do inicializador, passe o valor do parâmetro ao atributo numero e crie um atributo privado _lista_contas. Essa lista deve começar vazia.
+- Escreva o método criar_conta(), que recebe uma conta como parâmetro. Essa conta deve ser adicionada em _lista_contas, caso ainda não esteja contida na lista.
+- Escreva o método listar_contas(). Esse método deve exibir informações de todas as contas contidas em _lista_contas. Sugestão: chamar o método exibir_info() de conta aí dentro.
+
+Crie a classe Banco.
+- Ela deve receber apenas dois parâmetros no inicializador: nome do banco e ano de fundação. Dentro do inicializador, atribua os valores dos parâmetros a esses dois atributos e crie um atributo privado _lista_agencias. Essa lista deve começar vazia.
+- Escreva o método adicionar_agencia(), que recebe uma agência como parâmetro. Essa agência deve ser adicionada em _lista_agencias, caso ainda não esteja contida na lista.
+- Escreva o método listar_agencias(). Esse método deve listar informações de todas as agências contidas em _lista_agencias. O método deve exibir o número de cada agência e quais contas estão cadastradas em cada agência.
+
+Crie a classe Pessoa.
+- Ela deve receber três parâmetros no inicializador: nome completo, CPF e data de nascimento. Atribua os valores dos parâmetros a cada um desses atributos.

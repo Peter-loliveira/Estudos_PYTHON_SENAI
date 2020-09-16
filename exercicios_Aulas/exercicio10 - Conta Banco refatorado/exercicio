@@ -1,18 +1,20 @@
 ##############################    ok    ##############################
 Refatore a classe ContaBanco criada na atividade anterior:
 - Crie um atributo de classe privado chamado id, com valor inicial 0.
+
 - O inicializador deve ter apenas dois parâmetros: titular e tipo_conta.
+
 - Dentro do inicializador, além de passar os valores dos parâmetros aos atributos titular e tipo_conta, crie os atributos privados _saldo (valor inicial 0.0) e _limite_saque (valor inicial 1000.0).
 
 - Crie a property e o setter de tipo_conta. Dentro do setter, permita apenas que os tipos C (de corrente) ou P (de poupança) sejam atribuídos. Caso a pessoa tente colocar um tipo de conta inválido, atribua o tipo P.
 
-
-
-############################    resta    ##############################
 - Crie também um atributo privado chamado _num_conta, que deve receber o id da classe. Atenção: a cada novo objeto criado, o id da classe deve ser incrementado anteriormente, para que cada conta tenha um número diferente. Portanto, a primeira conta criada vai ter _num_conta = 1, a segunda conta criada terá _num_conta = 2 e assim sucessivamente. O atributo de classe id servirá justamente para auxiliar nessa contagem. O incremento do id deve ser feito dentro do próprio inicializador.
 
 - Crie a property de saldo.
 - Mantenha os métodos sacar(), depositar() e exibir_info() da atividade anterior.
+
+
+############################    resta    ##############################
 
 Crie a classe Agencia.
 - Ela deve ter apenas ‘numero’ como parâmetro no inicializador. Dentro do inicializador, passe o valor do parâmetro ao atributo numero e crie um atributo privado _lista_contas. Essa lista deve começar vazia.

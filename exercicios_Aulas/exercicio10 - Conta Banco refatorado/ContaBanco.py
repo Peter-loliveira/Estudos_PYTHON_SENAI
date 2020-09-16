@@ -9,37 +9,26 @@ class ContaBanco:
         cls._id = id_ultima_conta + 1
 
     def __init__(self, titular, tipo_desejado):
-        self.titular = titular
+        ContaBanco.gera_novo_id_conta(self.id)
         self._tipo_conta = ''
+        self.titular = titular
         self._num_conta = ''
         self._saldo = 0
         self._limite_saque = 1000.00
 
-        @property
-        def id(cls):
-            return cls._id
-        @id.setter
-        def id(cls,contaID):
-            self._id = atualiza_Contas(cls.id)
+        self.tipo_conta = tipo_desejado.upper()
 
-    @property
-    def num_conta(self):
-        return self._num_conta
-    @num_conta.setter
-    def num_conta(self, numero_da_conta):
-        self._num_conta = numero_da_conta
-        
     @property
     def tipo_conta(self):
         return self._tipo_conta    
     @tipo_conta.setter
-    def tipo_conta(self, tipo_da_conta):
-        tiposAceitos = ['c', 'C', 'p','P']
-        if tipo_da_conta not in tiposAceitos:
+    def tipo_conta(self, tipo):
+        tiposAceitos = ['C', 'P', 'S']
+        if tipo not in tiposAceitos:
             print( 'Tipo não compativel. A conta será setada para POUPANÇA (P)' )
             self._tipo_conta = tiposAceitos[-1]
         else:
-            self._tipo_conta = tipo_da_conta
+            self._tipo_conta = tipo.upper()
 
     @property
     def saldo(self):
@@ -69,9 +58,9 @@ class ContaBanco:
             print( 'Realizado saque de R$', valor_do_saque )
     
     def exibe(self):
-        print('--------------------------------------------------')
-        print( 'Numero da conta:', self._id, '| Titular:', self.titular, '| Tipo Conta:', self.tipo_conta )
+        print('-----------------------------------------------------')
+        print( 'Numero da conta:', self.id, '| Titular:', self.titular, '| Tipo Conta:', self._tipo_conta )
         print( 'Limite de Saque: ', self.limite_saque)
-        print( 'Saldo:', self.saldo,)
-        print('--------------------------------------------------')
+        print( 'Saldo:', self.saldo)
+        print('-----------------------------------------------------')
         print( '\n' )

@@ -13,8 +13,8 @@ Refatore a classe ContaBanco criada na atividade anterior:
 - Crie a property de saldo.
 - Mantenha os métodos sacar(), depositar() e exibir_info() da atividade anterior.
 
-
-############################    resta    ##############################
+Crie a classe Pessoa.
+- Ela deve receber três parâmetros no inicializador: nome completo, CPF e data de nascimento. Atribua os valores dos parâmetros a cada um desses atributos.
 
 Crie a classe Agencia.
 - Ela deve ter apenas ‘numero’ como parâmetro no inicializador. Dentro do inicializador, passe o valor do parâmetro ao atributo numero e crie um atributo privado _lista_contas. Essa lista deve começar vazia.
@@ -26,5 +26,3 @@ Crie a classe Banco.
 - Escreva o método adicionar_agencia(), que recebe uma agência como parâmetro. Essa agência deve ser adicionada em _lista_agencias, caso ainda não esteja contida na lista.
 - Escreva o método listar_agencias(). Esse método deve listar informações de todas as agências contidas em _lista_agencias. O método deve exibir o número de cada agência e quais contas estão cadastradas em cada agência.
 
-Crie a classe Pessoa.
-- Ela deve receber três parâmetros no inicializador: nome completo, CPF e data de nascimento. Atribua os valores dos parâmetros a cada um desses atributos.

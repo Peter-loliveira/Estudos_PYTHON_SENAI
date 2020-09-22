@@ -1,0 +1,35 @@
+Classe Animal
+- Crie os atributos privados nome, idade, genero, peso.
+- Dentro do init, além de inicializar os atributos acima com os parâmetros, crie os atributos energia (privado, valor inicial 60.0) e som (público, string vazia).
+- Crie o método obter_informacoes(), que retorna uma string com dados dos atributos.
+- Crie o método comer(), considerando as seguintes informações:
+---> O peso do animal é incrementado em 0.7 quando come.
+---> Se a energia do animal estiver menor do que 75, então vai aumentar em 25. Do contrário, vai ficar em 100% mesmo.
+- Crie o método mover(), com as especificações:
+---> O peso do animal é decrementado em 0.1 quando se move.
+---> Se a energia do animal estiver maior do 20, então vai reduzir em 10.
+- Crie o método emitir_som():
+---> Se a energia do animal estiver maior do que 10, vai ser subtraída em 5 e o método vai retornar o atributo som. Do contrário, o método retorna uma string vazia.
+
+Classe Cachorro
+- Essa classe deve herdar de Animal.
+- O init deve contar os 4 atributos de Animal, além dos atributos privados: raca (sem ç) e tipo_pelo.
+- Dentro do init, use o super() para passar os quatro primeiros atributos para Animal.
+- Abaixo do super, atribua os valores dos parâmetros para raca e tipo_pelo.
+- Por fim, dentro do init, atribua a string "Latido" para o atributo som.
+- Sobrescreva o método obter_informacoes(), sabendo que:
+---> O método retorna uma string contendo os dados do objeto Cachorro criado.
+---> O método deve reaproveitar o obter_informacoes() da classe Animal. Para isso, use novamente o super(). Essas informações devem ser concatenadas com a raca e tipo_pelo.
+
+Classe Pessoa
+- Essa classe também deve herdar de Animal.
+- O init deve contar com os 4 atributos de animal, além dos atributos naturalidade (privado) e ocupacao (público).
+- Chame o super() para repassar os 4 primeiros atributos.
+- Atribua os valores dos parâmetros para naturalidade e ocupacao.
+- Atribua a string "Fala" para o atributo som.
+- Sobrescreva o método obter_informacoes(), que retorna uma string com os dados daquele objeto de Pessoa:
+---> Reaproveite o método de mesmo nome da super classe, através do super(). E concatene com os dados de naturalidade e ocupacao.
+- Crie a property de ocupacao.
+- Crie o setter de ocupacao, que possui a seguinte condição: a ocupacao passada como parâmetro só pode ser atribuída se não for "Docente". Ou seja, a pessoa pode ter qualquer ocupação, menos "Docente". :(
+
+Use a classe AnimalMain.py abaixo como ponto de partida para o seu programa. A saída deve exibir algo parecido com a imagem abaixo.

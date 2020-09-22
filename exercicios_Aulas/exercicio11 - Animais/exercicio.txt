@@ -3,8 +3,8 @@ Classe Animal
 - Dentro do init, além de inicializar os atributos acima com os parâmetros, crie os atributos energia (privado, valor inicial 60.0) e som (público, string vazia).
 - Crie o método obter_informacoes(), que retorna uma string com dados dos atributos.
 - Crie o método comer(), considerando as seguintes informações:
----> O peso do animal é incrementado em 0.7 quando come.
----> Se a energia do animal estiver menor do que 75, então vai aumentar em 25. Do contrário, vai ficar em 100% mesmo.
+    ---> O peso do animal é incrementado em 0.7 quando come.
+    ---> Se a energia do animal estiver menor do que 75, então vai aumentar em 25. Do contrário, vai ficar em 100% mesmo.
 - Crie o método mover(), com as especificações:
 ---> O peso do animal é decrementado em 0.1 quando se move.
 ---> Se a energia do animal estiver maior do 20, então vai reduzir em 10.
@@ -20,6 +20,9 @@ Classe Cachorro
 - Sobrescreva o método obter_informacoes(), sabendo que:
 ---> O método retorna uma string contendo os dados do objeto Cachorro criado.
 ---> O método deve reaproveitar o obter_informacoes() da classe Animal. Para isso, use novamente o super(). Essas informações devem ser concatenadas com a raca e tipo_pelo.
+
+-------------------   FALTA   -------------------
+
 
 Classe Pessoa
 - Essa classe também deve herdar de Animal.

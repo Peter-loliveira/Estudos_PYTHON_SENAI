@@ -41,14 +41,20 @@ class Animal:
     @energia.setter
     def energia(self, energia_informado):
         self._energia = energia_informado
-
+    
     @property
+    def som(self):
+        return self._som
+    @som.setter
+    def som(self,som_emitido):
+        self._som = som_emitido
+
     def obter_informacoes(self):
-        infos = 'Nome: {} | Idade: {} | Genero: {}\n'.format(self.nome,self.idade,self.genero)
-        infos = 'Peso: {} kg | Energia: {}\n'.format(self.peso,self.energia)
-        infos = self.emitir_som()
+        infos = '\nNome: {} | Idade: {} | Genero: {}\n'.format(self.nome,self.idade,self.genero)
+        infos += 'Peso: {} kg | Energia: {}'.format(self.peso,self.energia)
         return infos
     
+
     def comer(self):
         self.peso += .7
         if self.energia < 75:
@@ -64,6 +70,6 @@ class Animal:
     def emitir_som(self):
         if self.energia > 10:
             self.energia -= 5
-            return 'Som do cão {}: {}\n'.format(1,2)
+            return self.som
         else: 
             return ''

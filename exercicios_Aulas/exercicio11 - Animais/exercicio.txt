@@ -20,10 +20,6 @@ Classe Cachorro
 - Sobrescreva o método obter_informacoes(), sabendo que:
 ---> O método retorna uma string contendo os dados do objeto Cachorro criado.
 ---> O método deve reaproveitar o obter_informacoes() da classe Animal. Para isso, use novamente o super(). Essas informações devem ser concatenadas com a raca e tipo_pelo.
-
--------------------   FALTA   -------------------
-
-
 Classe Pessoa
 - Essa classe também deve herdar de Animal.
 - O init deve contar com os 4 atributos de animal, além dos atributos naturalidade (privado) e ocupacao (público).
@@ -34,5 +30,8 @@ Classe Pessoa
 ---> Reaproveite o método de mesmo nome da super classe, através do super(). E concatene com os dados de naturalidade e ocupacao.
 - Crie a property de ocupacao.
 - Crie o setter de ocupacao, que possui a seguinte condição: a ocupacao passada como parâmetro só pode ser atribuída se não for "Docente". Ou seja, a pessoa pode ter qualquer ocupação, menos "Docente". :(
-
 Use a classe AnimalMain.py abaixo como ponto de partida para o seu programa. A saída deve exibir algo parecido com a imagem abaixo.
+
+
+-------------------   FALTA   -------------------
+

@@ -3,12 +3,14 @@ from Animal import Animal
 class Cachorro(Animal):
     def __init__(self, nome, idade, genero, peso, raca, tipo_pelo):
         super().__init__(nome, idade, genero, peso)
+        Cachorro.som = 'Latido'
         self._raca = raca
         self._tipo_pelo = tipo_pelo
-        super().som = 'Latido'
 
     def obter_informacoes(self):
-        return super().obter_informacoes() + '\Raça: {} | Tipo de Pelo:{}\n'.format(self.raca,self.tipo_pelo)
+        infor = 'Raça: {} | Tipo do Pêlo: {}'.format(self.raca, self.tipo_pelo)
+        return super().obter_informacoes() + infor
+        # + '\Raça: {} | Tipo de Pelo:{}\n'.format(self.raca,self.tipo_pelo)
     
     @property
     def raca(self):

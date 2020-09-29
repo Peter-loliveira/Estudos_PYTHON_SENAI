@@ -8,7 +8,7 @@ class Cachorro(Animal):
         self._tipo_pelo = tipo_pelo
 
     def obter_informacoes(self):
-        infor = 'Raça: {} | Tipo do Pêlo: {}'.format(self.raca, self.tipo_pelo)
+        infor = '\nRaça: {} | Tipo do Pêlo: {}'.format(self.raca, self.tipo_pelo)
         return super().obter_informacoes() + infor
         # + '\Raça: {} | Tipo de Pelo:{}\n'.format(self.raca,self.tipo_pelo)
     

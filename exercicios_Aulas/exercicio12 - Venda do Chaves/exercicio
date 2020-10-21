@@ -5,3 +5,60 @@ Dessa vez criei um doc com a descrição da atividade Venda do Chaves.
 Vocês terão um bom tempo para desenvolver a Venda do Chaves. Coloquei o prazo final de entrega para o dia 07/10.
 
 Obviamente, a atividade que vocês farão na quarta que vem (30/09) não será tão extensa assim. Portanto, implementar a Venda do Chaves dará uma base mais do que suficiente para fazer sem problemas a atividade do dia 30. :)
+
+==========================================================================
+
+
+
+==========================================================================
+Atividade: Venda do Chaves
+Classe Produto
+Possui 4 atributos privados no inicializador: nome, sabor, tamanho, preco_base.
+Atenção: Na Main, o atributo tamanho receberá sempre 0 (representa um produto pequeno), 1 (médio) ou 2 (grande).
+Possui um atributo de classe privado chamado preco_tamanho. Esse atributo é um vetor com 3 preços: 2.0, 2.5, 3.0. Cada preço é o valor base para um tamanho. Portanto, 2.0 é o valor base para um produto pequeno, 2.5 é o valor base para um produto médio e 3.0 é o valor base de um produto grande.
+Possui o método preco(). Esse método deve calcular o preço de um produto, de acordo com a fórmula: preco_base x  preco_tamanho[tamanho do produto]
+Possui o método info(). Esse método retorna uma string com as informações do produto: nome, sabor, tamanho e preço.
+ 
+Classe Refresco
+Essa classe herda de Produto.
+Possui o atributo de classe sabores. Esse atributo é um vetor com três sabores: Groselha, Limão e Tamarindo.
+Nos parâmetros do inicializador, ela possui sabor, tamanho e tem_acucar.
+Atenção: O atributo sabor sempre receberá 0, 1 ou 2. Na hora de repassar o sabor para a superclasse, basta buscar o sabor daquela posição no vetor de sabores.
+Dentro do inicializador, é necessário chamar o inicializador da superclasse, passando, na ordem: nome (sempre “Refresco”), o sabor obtido do vetor sabores, tamanho, preco_base (sempre 1.5).
+Ainda dentro do inicializador, o atributo tem_acucar é inicializado com o valor recebido por parâmetro.
+Possui o getter de tem_acucar. Aqui dentro o atributo é retornado como privado.
+Possui o setter de tem_acucar. Aqui dentro o atributo é chamado como privado também. Caso o parâmetro seja “S”, tem_acucar recebe “Sim”. Do contrário, tem_acucar recebe “Não”.
+Sobrescreve o método info(). Para isso, o info da superclasse é chamado e concatenado com o dado de tem_acucar.
+ 
+
+Classe Churros
+Essa classe herda de Produto.
+Possui o atributo de classe sabores. Esse atributo é um vetor com três sabores: Doce de Leite, Chocolate e Goiabada.
+Possui um atributo de classe privado preco_base, com valor igual a 2.5.
+Nos parâmetros do inicializador, ela possui sabor, tamanho e tem_cobertura.
+Atenção: O atributo sabor sempre receberá 0, 1 ou 2. Na hora de repassar o sabor para a superclasse, basta buscar o sabor daquela posição no vetor de sabores.
+Dentro do inicializador, é necessário chamar o inicializador da superclasse, passando, na ordem: nome (sempre “Churros”), o sabor obtido do vetor sabores, tamanho, preco_base (o atributo de classe).
+Ainda dentro do inicializador, o atributo tem_cobertura é inicializado com o valor recebido por parâmetro.
+Possui o getter de tem_cobertura. Aqui dentro o atributo é retornado como privado.
+Possui o setter de tem_cobertura. Aqui dentro o atributo é chamado como privado também. Caso o parâmetro seja “S”, tem_cobertura recebe “Sim” e o preço base aumenta em 0.2. Do contrário, tem_cobertura recebe “Não”.
+Sobrescreve o método info(). Para isso, o info da superclasse é chamado e concatenado com o dado de tem_cobertura.
+ 
+Classe Venda
+Possui 2 atributos no inicializador: itens (declarado como privado) e forma de pagamento.
+Possui o getter de forma_pagamento. Aqui dentro o atributo é retornado como privado.
+Possui o setter de forma_pagamento. Aqui dentro o atributo é chamado como privado também. Caso o parâmetro seja “C”, forma_pagamento recebe “Cartão”. Do contrário, forma_pagamento recebe “Dinheiro”.
+Possui o método calcular_preco_final(). Esse método percorre todos os produtos do vetor itens e acumula os preços. Após o laço, verifica se a forma de pagamento é em “Cartão”. Se sim, aumenta o preço final em 5%. Por fim, retorna o preço final.
+Possui o método ler_itens(). Esse método percorre todos os produtos do vetor itens e forma uma string com as informações de cada produto vendido (com o método info()). Por fim, retorna essa string.
+Possui o método extrato_venda(). Esse método retorna uma string com as informações da venda: itens vendidos (chama ler_itens()), preço final da venda (chama calcular_preco_final()) e a forma de pagamento.
+ Classe OpcaoInvalidaError
+Essa classe herda de Exception. Ela apenas possui um atributo de classe mensagem_padrao, que recebe a string “Opção inválida. Item cancelado.”
+ 
+Classe VendaMain
+Os métodos main(), comprar_produto() e pagar() estão implementados. É necessário implementar iniciar_compra().
+No método iniciar_compra(produto), uma tentativa de input é feita para que seja informado o tamanho do produto: 0) Pequeno, 1) Médio ou 2) Grande. Caso seja informada opção diferente das três, a exceção OpcaoInvalidaError é forçada. A exceção precisa ser capturada, e dentro do except o programa exibe a mensagem padrão de erro da classe OpcaoInvalidaError.
+Caso um tamanho válido seja informado, o programa verifica qual produto foi passado como parâmetro para iniciar_compra(). Se o produto for 1 (refresco), um vetor é criado com as opções de sabor de Refresco. Do contrário, um vetor é criado com as opções de sabor de Churros. Para ambos os casos, é necessário chamar o vetor sabores, seja de Refresco ou de Churros.
+Por fim, o método comprar_produto() é chamado, passando os parâmetros: vetor de sabores (obtido acima) e tamanho.
+Pode ser uma boa ideia olhar os métodos já implementados.
+Estou compartilhando o executável do programa, para que vocês testem e tenham melhor noção da atividade.
+ 
+

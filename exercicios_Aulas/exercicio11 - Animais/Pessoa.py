@@ -27,3 +27,5 @@ class Pessoa(Animal):
     def ocupacao(self, ocupacao_digitada):
         if ocupacao_digitada.upper() != 'DOCENTE':
             self._ocupacao = ocupacao_digitada
+
+    jogo.da

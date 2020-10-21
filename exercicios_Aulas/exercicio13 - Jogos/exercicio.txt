@@ -1,0 +1,55 @@
+Atividade: Classificando Jogos
+Escreva o seguinte programa em Python.
+Classe Jogo
+Possui o atributo de classe privado tipos_jogo. É uma lista com três itens: Jogo Eletrônico (posição 0), Jogo de Cartas (1) e Outro (2).
+
+No inicializador, possui os atributos privados: nome, clas_etaria, tipo. O parâmetro tipo sempre passa 0, 1 ou 2. O atributo tipo vai receber o que tem na respectiva posição (0, 1 ou 2) da lista tipos_jogo.
+
+O init também possui o atributo preco, que aqui dentro não é sinalizado como privado.
+
+Possui o getter de preco. O método retorna preco como privado.
+
+Possui o setter de preco. O método atribui um valor a preco (privado) de acordo com as seguintes especificações:
+
+Se a classificação etária do jogo for 18+, o preço a ser atribuído ao jogo é o parâmetro acrescido em 10%. 
+
+Se a classificação etária do jogo estiver entre 12 e 17 anos, o preço do jogo aumenta em 5%. Se a classificação etária for menor do que 12, o preço do jogo é apenas o valor recebido como parâmetro.
+
+Possui o método dados_jogo(). O método retorna uma string com as informações de nome, preço e tipo do jogo.
+
+Classe JogoCartas (herda de Jogo)
+No inicializador, chama o init da superclasse, passando nome, clas_etaria, tipo (sempre 1), preco. 
+Além disso, possui dois atributos privados: qtd_jogadores e deck (significa uma lista de cartas).
+
+Possui o método embaralhar(). A primeira coisa que o método faz é misturar aleatoriamente os itens de deck. Para isso, importe a função shuffle do módulo random. Basta passar o deck como parâmetro para shuffle() e ele será embaralhado. O método também retorna uma string com todas as cartas (já misturadas) e separadas por ponto-e-vírgula.
+
+Sobrescreve o método dados_jogo() da superclasse. Retorna uma string com as informações da superclasse, além da quantidade de jogadores e do deck (já embaralhado!).
+
+Classe JogoEletronico (herda de Jogo)
+
+No inicializador, chama o init da superclasse, passando nome, clas_etaria, tipo (sempre 0), preco. Além disso, possui dois atributos privados: categoria e plataformas (lista com as plataformas para as quais o jogo foi desenvolvido).
+
+Possui o método listar_plataformas(). A primeira coisa que o método faz é ordenar alfabeticamente as plataformas. Para isso, basta chamar o método sort(), nativo para toda lista. Em seguida, o método deve retornar uma 
+string com todas as plataformas (já em ordem alfabética) e separadas por ponto-e-vírgula.
+
+Sobrescreve o método dados_jogo() da superclasse. Retorna uma string com as informações da superclasse, além da categoria do jogo e plataformas (já ordenadas alfabeticamente!).
+
+Classe JogoMain
+
+Crie um módulo main(). No módulo, instancie um objeto Jogo, outro JogoCartas e outro JogoEletronico.
+Para cada objeto, exiba o retorno do método dados_jogo().
+Exemplo:
+
+Criei um objeto para Jogo, passando como parâmetros: nome = Dominó; tipo = 2; clas_etaria = 0; preco = 20.00.
+
+=============================================================
+
+Criei um objeto para JogoCartas, passando como parâmetros: nome = Yu-Gi-Oh; clas_etaria = 12; preco = 40.00; qtd_jogadores = 2; deck = [Dark Hole, Exodia, Mirror Force, Slifer].
+
+Criei um objeto para JogoEletronico, passando como parâmetros: nome = GTA V; clas_etaria = 18; preco = 150.00; categoria = Aventura; plataformas = [Windows, PlayStation, XBox].
+
+=============================================================
+ 
+Para cada objeto, chamei e printei o resultado de dados_jogo(). A saída do console é indicada na imagem abaixo.
+O preço de GTA ficou em R$ 165.00. Originalmente custava R$ 150.00, mas foram acrescidos 10% por causa da classificação etária (18+ anos). As plataformas de GTA foram exibidas na ordem alfabética e separadas por ;.
+O preço de Yu-Gi-Oh ficou em R$ 42.00. Originalmente custava R$ 40.00, mas foram acrescidos 5% por causa da classificação etária (12+ anos). As cartas do deck foram exibidas de forma embaralhada e separadas por ;.
